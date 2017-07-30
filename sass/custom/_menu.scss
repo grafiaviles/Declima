@@ -4,11 +4,24 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+
 /* -------------------------------- 
 
 Main components 
 
 -------------------------------- */
+html {
+	font-family: $primary-font;
+}
+
+body {
+	@include MQ(maxL) { // layout mixins inside partials > _layout.scss
+		&.nav-on-left.overflow-hidden {
+			overflow: hidden;
+		}
+	}
+}
 
 .cd-main-content, .cd-main-header {
 	/* Force Hardware Acceleration in WebKit */
@@ -296,7 +309,6 @@ Main components
 
 	a {
 		display: block;
-		font-family: $primary-font;
 		font-size: .95em;
 		height: 50px;
 		line-height: 50px;
