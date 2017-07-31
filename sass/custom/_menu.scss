@@ -52,6 +52,8 @@ body {
 	height: $header-height-S;
 	background: $color-1;
 	z-index: $above-content;
+	position: fixed;
+	width: 100%;
 
 	.nav-is-fixed & {
 		/* add .nav-is-fixed class to body if you want a fixed navigation on > 1170px */
@@ -120,6 +122,8 @@ body {
 .cd-nav {
 	background-color: transparent;
 	box-shadow: none;
+	line-height: none;
+	height: auto;
 }
 .cd-search-trigger, .cd-nav-trigger {
 	position: relative;
