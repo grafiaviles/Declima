@@ -44,7 +44,7 @@ body {
 }
 .cd-main-content {
 	background: $color-3;
-	min-height: 100vh;
+	min-height: 1500px;
 	z-index: $content;
 }
 
@@ -361,6 +361,8 @@ body {
 		h3 {
 			overflow: hidden;
 			text-overflow: ellipsis;
+			font-size: 1rem;
+			margin: 0 0 5px 0;
 		}
 	}
 
@@ -386,6 +388,7 @@ body {
 			font-size: 1.3rem;
 			/* hide description on small devices */
 			display: none;
+			margin: 0;
 		}
 
 		&::before {
@@ -510,7 +513,7 @@ body {
 
 			&.selected {
 				color: $color-2;
-				box-shadow: inset 0 -2px 0 $color-2;
+				box-shadow: inset 0 -3px 0 $color-2;
 			}
 		}
 
@@ -717,6 +720,8 @@ body {
 				h3 {
 					color: $color-2;
 					font-weight: bold;
+					line-height: 80px;
+					height: 80px;
 				}
 
 				p {
@@ -741,7 +746,7 @@ body {
 		top: 50%;
 		margin-top: -1px;
 		display: inline-block;
-		height: 2px;
+		height: 1px;
 		width: 10px;
 		background: lighten($color-1, 10%);
 		-webkit-backface-visibility: hidden;
@@ -795,15 +800,14 @@ body {
 			right: 15%;
 		}
 	}
-
 	.cd-primary-nav > .has-children > a {
 		/* main navigation arrows on larger devices */
 		padding-right: 30px !important;
 
 		&::before, &::after {
-			width: 9px;
+			width: 8px;
 			@include transform-origin(50% 50%);
-			background: lighten($color-1, 10%);
+			background: lighten($color-1, 100%);
 			-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
 			@include transition(width .3s, transform .3s);
@@ -841,6 +845,9 @@ body {
 		&::before, &::after {
 			left: 1px;
 		}
+	}
+	.lista {
+		width: 100%;
 	}
 }
 
